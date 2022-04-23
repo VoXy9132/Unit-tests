@@ -15,7 +15,7 @@ class TestCalc(unittest.TestCase):
     def test_upper(self):
         self.assertEqual('abc'.upper(), 'ABC')
 
-    def test_strip(self):
+    def test_split(self):
         with self.assertRaises(AttributeError):
             x = 42
             x.split()
