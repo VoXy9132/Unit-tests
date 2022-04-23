@@ -15,10 +15,12 @@ class TestCalc(unittest.TestCase):
     def test_upper(self):
         self.assertEqual('abc'.upper(), 'ABC')
 
+    def test_split_raise(self):
+        with self.assertRaises(TypeError):
+            'abc'.split(4)
+
     def test_split(self):
-        with self.assertRaises(AttributeError):
-            x = 42
-            x.split()
+        self.assertEqual('ab c'.split(), ['ab', 'c'])
 
 
 
